@@ -17,7 +17,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 ![FORKS](https://img.shields.io/github/forks/scottbromander/the_marketplace.svg?style=social)
 
 # PROJECT NAME
-
+JQUERY Calculator
 ## Description
 
 _Duration: 2 Week Sprint_
