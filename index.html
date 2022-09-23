@@ -10,25 +10,39 @@
     <title>Jquery Calculator</title>
 </head>
 <body>
-
+<header>
+    <h1>
+        Staffing Cost Calculator
+    </h1>
+</header>
+<h2 class="h2One"> Add Employee: </h2>
 <form id="employeeForm">
     <input id="fName" type="text" placeholder="First Name"/>
     <input id="lName" type="text" placeholder="Last Name"/>
     <input id="ID" type="number" placeholder="ID" min=0/>
     <input id="Title" type="text" placeholder="Title"/>
     <input id="Salary" type="number" placeholder = "Salary" min=0/>
+
+    <button id="addData">Add Employee</button>
 </form>
 
-
-
-
+<h2 class="h2Two">Employee list:</h2>
 <table id="theTable">
+    <tr id="tableRowTH">
+        <th>First Name</th> 
+        <th>Last Name</th>
+        <th>Title</th>
+        <th>ID</th>
+        <th>Salary</th>
+    </tr>
 
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Title</th>
-    <th>ID</th>
-    <th>Salary</th>
+    <tr id="tableRowTD">
+        <td>name</td>
+        <td>lname</td>
+        <td>tile</td>
+        <td>ID</td>
+        <td>Sal</td>
+    </tr>
 
 </table>
 

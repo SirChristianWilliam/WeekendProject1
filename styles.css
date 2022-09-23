@@ -1,4 +1,73 @@
-body {
-    background-color: red;
+* {
 }
 
+body {
+    background-color: red;
+    margin:0;
+    padding:0;
+
+}
+
+/* ELEMENTS BEFORE <FORM> */
+ 
+header {
+
+}
+
+h1 {
+    padding:20px;
+    width:100%;
+    margin-top:0;
+    text-align: center;
+}
+h2:first-of-type {
+    color:white;
+ }
+
+
+/* END */
+
+
+/* FORM ELEMENTS */
+form#employeeForm {
+    background-color: blue;
+}
+form input#fName {
+    background-color: green;
+}
+form input#lName {
+    background-color: magenta;
+}
+form input#ID {
+    background-color: aqua;
+}
+form input#Title {
+    background-color: cyan;
+}
+form input#Salary {
+    background-color: brown;
+}
+form button#addData {
+    background-color: darkorange;
+}
+/* END  */
+
+/* TABLE ELEMENTS */
+table#theTable {
+
+}
+tr#tableRowTH{
+
+}
+th {
+
+}
+tr#tableRowTD {
+
+}
+td {
+
+}
+
+
+/*  END */
