@@ -7,9 +7,9 @@ function onReady() {
  }
 
  function addPerson(evt) {
-    evt.preventDefault();
+    evt.preventDefault(); //Prevent refreshing of page
 
-    let newObj = {
+    let newObj = {//Add the information from the form, as an object
         fName: $('#fName').val(),
         lName: $('#lName').val(),
         ID: $('#ID').val(),
@@ -17,9 +17,9 @@ function onReady() {
         salary: $('#Salary').val()
     }
     
-    employeeArr.push(newObj);
+    employeeArr.push(newObj); //add the object to the state array
  
-    $('#theTable').append(`
+    $('#theTable').append(` // add the information to the DOM
     <tr>
         <td>
         ${newObj.fName}
@@ -36,6 +36,9 @@ function onReady() {
         <td>
         ${newObj.salary}
         </td>
+        <td>
+        <button>Del</button>
+        </td>
     </tr>
     `)
 
@@ -48,14 +51,16 @@ addTotal();
     $('#Salary').val('');
    }
 
- function addTotal() {
-    total=0;
-      for(let sal of employeeArr) {
-        total+= Number(sal.salary);
+ function addTotal() { 
+    total=0;//Reset the total
+      for(let sal of employeeArr) {//Loop through entire array
+        total+= Number(sal.salary);//Find all the current array's salary values
        }
        
-       $('#total').text(Number(total/12));
+       $('#total').text(Number(total/12)); //Add the total salary values together & display on the DOM
        if($('#total').text() >= 20000) {
-        $('#total').addClass('tooMuch')
+        $('#total').addClass('tooMuch') //add a css class if the value is as specified
        }
   }
+
+
