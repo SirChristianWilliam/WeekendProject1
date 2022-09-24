@@ -1,6 +1,6 @@
 $(document).ready(onReady);
 let employeeArr = [];
-
+let total;
 function onReady() {
    $('#addData').on('click',addPerson);//Call a function when clicked.
 
@@ -38,4 +38,24 @@ function onReady() {
         </td>
     </tr>
     `)
- }
+
+addTotal();
+//Clear the form input values
+    $('#fName').val('');
+    $('#lName').val('');
+    $('#ID').val('');
+    $('#Title').val('');
+    $('#Salary').val('');
+   }
+
+ function addTotal() {
+    total=0;
+      for(let sal of employeeArr) {
+        total+= Number(sal.salary);
+       }
+       
+       $('#total').text(Number(total/12));
+       if($('#total').text() >= 20000) {
+        $('#total').addClass('tooMuch')
+       }
+  }
