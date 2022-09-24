@@ -3,6 +3,7 @@ let employeeArr = [];
 let total;
 function onReady() {
    $('#addData').on('click',addPerson);//Call a function when clicked.
+   $('#theTable').on('click', '.deleteEmp', onDelete);
 
  }
 
@@ -37,7 +38,7 @@ function onReady() {
         ${newObj.salary}
         </td>
         <td>
-        <button>Del</button>
+        <button class="deleteEmp">Del</button>
         </td>
     </tr>
     `)
@@ -61,6 +62,11 @@ addTotal();
        if($('#total').text() >= 20000) {
         $('#total').addClass('tooMuch') //add a css class if the value is as specified
        }
+       
   }
+
+  function onDelete() {
+     $(this).parent().parent().remove();
+    }
 
 
