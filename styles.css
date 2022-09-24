@@ -16,7 +16,9 @@ body {
  
 header {
     box-sizing: border-box;
+    overflow: hidden;
     border:1px solid black;
+    
 }
 
 h1 {
@@ -26,16 +28,19 @@ h1 {
     text-align: center;
 }
 h2:first-of-type {
-    color:white;
+    color:black;
     left: 50px;
     position: relative;
     width:200px;
+    text-decoration: underline;
  }
  h2:last-of-type {
      width:65%;
     margin-right:50px;
      text-align:center;
     float:right;
+    text-decoration: overline;
+
  }
 /* END */
 
@@ -72,32 +77,39 @@ form button#addData {
 /* END  */
 
 /* TABLE ELEMENTS */
-table {
-    
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
 }
+
 h2:last-of-type {
      
  }
 table#theTable {
-    border: 1px solid black;
     width:65%;
-    margin-right:50px;
+    margin-right:75px;
      text-align:center;
     float:right;
     
 
 }
 tr#tableRowTH{
+    border: 1px solid black;
 
 }
 th {
-
+    font-size: 20px;
+     line-height: 45px;
 }
 tr#tableRowTD {
 
 }
 td {
+    line-height: 30px;
 
+}
+#lastTH {
+    background-color: rgba(50,50,50,.3)
 }
 
 
