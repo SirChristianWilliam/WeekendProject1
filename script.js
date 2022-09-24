@@ -18,5 +18,24 @@ function onReady() {
     }
     
     employeeArr.push(newObj);
-    console.log(newObj);
+ 
+    $('#theTable').append(`
+    <tr>
+        <td>
+        ${newObj.fName}
+        </td> 
+        <td>
+        ${newObj.lName}
+        </td>
+        <td>
+        ${newObj.ID}
+        </td> 
+        <td>
+        ${newObj.title}
+        </td>
+        <td>
+        ${newObj.salary}
+        </td>
+    </tr>
+    `)
  }
