@@ -1,17 +1,22 @@
 * {
+    box-sizing: border-box;
 }
+ 
 
 body {
-    background-color: red;
+    background-image: linear-gradient(to bottom right,rgba(178, 172, 172, 0.459),rgb(27, 29, 30));
     margin:0;
     padding:0;
+    background-size:cover;
+    background-attachment: fixed;
 
 }
 
 /* ELEMENTS BEFORE <FORM> */
  
 header {
-
+    box-sizing: border-box;
+    border:1px solid black;
 }
 
 h1 {
@@ -22,38 +27,64 @@ h1 {
 }
 h2:first-of-type {
     color:white;
+    left: 50px;
+    position: relative;
+    width:200px;
  }
-
-
+ h2:last-of-type {
+     width:65%;
+    margin-right:50px;
+     text-align:center;
+    float:right;
+ }
 /* END */
 
 
 /* FORM ELEMENTS */
+
 form#employeeForm {
-    background-color: blue;
+    width: 25%;
+    float:left;
+    padding-left:50px;
+    line-height: 80%;
+  }
+input {
+    width:200px;
+    font-size: 20px;;
 }
 form input#fName {
-    background-color: green;
-}
+ }
 form input#lName {
-    background-color: magenta;
-}
+ }
 form input#ID {
-    background-color: aqua;
-}
+ }
 form input#Title {
-    background-color: cyan;
-}
+ }
 form input#Salary {
-    background-color: brown;
-}
+ }
 form button#addData {
-    background-color: darkorange;
-}
+ }
+ label {
+     
+   width: 100px;
+  display: inline-block;
+ }
 /* END  */
 
 /* TABLE ELEMENTS */
+table {
+    
+}
+h2:last-of-type {
+     
+ }
 table#theTable {
+    border: 1px solid black;
+    width:65%;
+    margin-right:50px;
+     text-align:center;
+    float:right;
+    
 
 }
 tr#tableRowTH{
