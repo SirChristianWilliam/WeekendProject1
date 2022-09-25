@@ -17,8 +17,11 @@ function onReady() {
         title: $('#Title').val(),
         salary: $('#Salary').val()
     }
-   
-    employeeArr.push(newObj); //add the object to the state array
+
+   if(newObj.fName === "" || newObj.lName === "" || newObj.ID === "" || newObj.title === "" || newObj.salary === "") {
+    alert("All input is required");
+    return;
+   }
 
     appendEmployee(newObj);
 }
@@ -35,7 +38,7 @@ function appendEmployee(arr) {
         <td>
         ${arr.lName}
         </td>
-        <td>
+        <td data-id="${arr.ID}">
         ${arr.ID}
         </td> 
         <td>
@@ -61,25 +64,28 @@ addTotal();
 
  function addTotal() { 
     total=0;//Reset the total
+    let salaryTotal = 0;
 
       for(let sal of employeeArr) {//Loop through entire array
-        total+= Number(sal.salary);//Find all the current array's salary values
+         salaryTotal+= parseInt(sal.salary);//Find all the current array's salary values
        }
-       
-       $('#total').text(Number(total/12)); //Add the total salary values together & display on the DOM
-       $('#total').empty();
-       $('#total').append('<h3>Total Monthly: $' + total.toFixed(2) +  '<h3>'); 
-       if($('#total').text() >= 20000) {
-        $('#total').addClass('tooMuch') //add a css class if the value is as specified
-       }
+       total = salaryTotal/12;
+         $('#total').empty();
+       $('#total').append('<h3 id="totally">Total Monthly: $' + total.toFixed(2) +  '<h3>'); 
+       if(total >= 20000) {
+
+        $('#totally').addClass('tooMuch'); //add a css class if the value is as specified
+       } else {
+        $('#totally').addClass('safeZone');
+        }
        
   }
    function onDelete(evt) {
     evt.preventDefault();
-     
-     $('#total').text($('#total').text());
-      console.log($(this).parent().text());  
-    $(this).parent().parent().remove();
+    let container = $(this).parent().parent().find('.celery').val();
+     employeeArr.splice(container,1);
 
+     $(this).closest('tr').remove();
+      addTotal();
     }
 
